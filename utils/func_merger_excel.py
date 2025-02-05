@@ -36,10 +36,10 @@ def combine_excel_files():
     
     with pd.ExcelWriter(output_file, engine='openpyxl') as writer:
         print("- Writing data to Excel...")
-        df_combined.to_excel(writer, sheet_name='Combined_Data', index=False)
+        df_combined.to_excel(writer, sheet_name='signal_mt_stop', index=False)
         
         workbook = writer.book
-        worksheet = writer.sheets['Combined_Data']
+        worksheet = writer.sheets['signal_mt_stop']
         
         print("- Adjusting column widths...")
         for col in worksheet.columns:
